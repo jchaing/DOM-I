@@ -108,7 +108,6 @@ footer.textContent = siteContent.footer.copyright;
 // Task 3: Add new content
 
 // Change the color of the navigation text to be green
-console.log(navItem);
 navItem.forEach(a => (a.style.color = 'green'));
 
 // Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
@@ -117,9 +116,28 @@ const nav = document.querySelector('nav');
 const a7 = document.createElement('a');
 a7.textContent = 'Help';
 a7.style.color = 'Green';
-nav.appendChild(a7)
+nav.appendChild(a7);
 
 const a8 = document.createElement('a');
 a8.textContent = 'Login';
 a8.style.color = 'Blue';
 nav.appendChild(a8);
+
+//Stretch Goals
+const header = document.querySelector('header');
+console.log(header.style);
+header.style.background = '#f2f2f2';
+header.style.width = '880px';
+header.style.overflow = 'hidden';
+header.style.position = 'fixed';
+header.style.top = '0';
+header.style.display = 'flex';
+header.style.alignItems = 'center';
+
+const cta = document.querySelector('.cta');
+console.log(cta.style);
+cta.style.marginTop = '200px';
+
+nav.style.paddingBottom = '10px';
+
+logo.style.paddingBottom = '10px';
