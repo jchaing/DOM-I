@@ -125,7 +125,6 @@ nav.appendChild(a8);
 
 //Stretch Goals
 const header = document.querySelector('header');
-console.log(header.style);
 header.style.background = '#f2f2f2';
 header.style.width = '880px';
 header.style.overflow = 'hidden';
@@ -135,7 +134,6 @@ header.style.display = 'flex';
 header.style.alignItems = 'center';
 
 const cta = document.querySelector('.cta');
-console.log(cta.style);
 cta.style.marginTop = '200px';
 
 nav.style.paddingBottom = '10px';
