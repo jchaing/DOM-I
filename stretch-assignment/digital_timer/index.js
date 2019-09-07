@@ -15,14 +15,6 @@ const timerSeconds = setInterval(
   1000
 );
 
-// const timerMsHundred = setInterval(() => {
-//   msHundreds.textContent = msHundredsCounter++;
-//   if (msHundredsCounter === 9) {
-//     clearInterval(timerMsHundred);
-//     msHundreds.textContent = 0;
-//   }
-// }, 100);
-
 const timerMS = setInterval(() => {
   if (msTensCounter < 10) {
     msTens.textContent = msTensCounter++;
