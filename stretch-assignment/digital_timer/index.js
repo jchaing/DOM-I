@@ -1,5 +1,6 @@
 const secondTens = document.getElementById('secondTens');
 const secondOnes = document.getElementById('secondOnes');
+const colon = document.getElementById('colon');
 const msHundreds = document.getElementById('msHundreds');
 const msTens = document.getElementById('msTens');
 
@@ -9,10 +10,18 @@ let msTensCounter = 0;
 
 const timerTenSeconds = setInterval(() => (secondTens.textContent = 1), 10000);
 
-const timerOneSeconds = setInterval(
+const timerSeconds = setInterval(
   () => (secondOnes.textContent = secondsCounter++),
   1000
 );
+
+// const timerMsHundred = setInterval(() => {
+//   msHundreds.textContent = msHundredsCounter++;
+//   if (msHundredsCounter === 9) {
+//     clearInterval(timerMsHundred);
+//     msHundreds.textContent = 0;
+//   }
+// }, 100);
 
 const timerMS = setInterval(() => {
   if (msTensCounter < 10) {
@@ -29,10 +38,15 @@ const timerMS = setInterval(() => {
 
 setTimeout(() => {
   clearInterval(timerTenSeconds);
-  clearInterval(timerOneSeconds);
+  clearInterval(timerSeconds);
   clearInterval(timerMS);
   secondTens.textContent = 1;
   secondOnes.textContent = 0;
   msHundreds.textContent = 0;
   msTens.textContent = 0;
+  secondTens.style.color = 'red';
+  secondOnes.style.color = 'red';
+  msHundreds.style.color = 'red';
+  msTens.style.color = 'red';
+  colon.style.color = 'red';
 }, 10000);
